@@ -1,0 +1,9 @@
+version: 1.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:eu-west-1:156962844638:task-definition/kakaninavin-authorization-service:1"
+        LoadBalancerInfo:
+          ContainerName: "kakaninavin-authorization-service"
+          ContainerPort: "8081"
