@@ -3,7 +3,7 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: "arn:aws:ecs:us-east-1:860061945305:task-definition/authorizationservice-rashi:2"
+        TaskDefinition: "arn:aws:iam::140863333081:role/ecsTaskExecutionRole"
         LoadBalancerInfo:
-          ContainerName: "authorizatioservice"
+          ContainerName: "authorization-service"
           ContainerPort: "8081"
